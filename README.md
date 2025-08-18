@@ -63,15 +63,25 @@ When the command finishes, your terminal will display output similar to the foll
 1. VS Code will prompt you for the Function App name. Copy it from either the terminal output or the Portal.
 1. VS Code will next prompt you for the Function App key. Copy that from the _default_ key on the **Functions** -> **App keys** page in the Azure portal.
 
-## Server authorization using Azure API Management (APIM)
-In addition to protecting server access through function keys, you can also add APIM in front of the Function app to add an extra layer of security. This sample leverages APIM's policy feature to redirect a client to authenticate with Entra ID before connecting to the MCP server. Specifically, this is achieved by creating two policies on the APIM resource. One policy checks access tokens from incoming requests, and if validation fails, returns a 404 with header containining the path to Protected Resource Metadata (PRM). Another policy returns the PRM, which a client can use to figure out the authorization server (Entra ID in this case) that provides access tokens to the MCP server.
+>[!TIP]
+>In addition to starting an MCP server in _mcp.json_, you can see output of a server by clicking **More..._ -> _Show Output**. The output provides useful information like why a connection might've failed.
 
-To see the above in action, test connecting to the server using the APIM endpoint instead of the Function app endpoint: 
-1. Stop the **remote-mcp-server** from previous
+## Server authorization using Azure API Management (APIM)
+
+In addition to protecting server access through function keys, you can also add APIM in front of the Function app to add an extra layer of security. This sample leverages APIM's policy feature to redirect a client to authenticate with Entra ID before connecting to the MCP server. Specifically, this is achieved by creating two policies on the APIM resource that follow the [MCP authorization specification](https://modelcontextprotocol.io/specification/2025-06-18/basic/authorization#authorization-server-discovery). One policy checks access tokens from incoming requests, and if validation fails, returns a 404 with header containining the path to Protected Resource Metadata (PRM). Another policy returns the PRM, which a client can use to figure out the authorization server (Entra ID in this case) that provides access tokens to the MCP server.
+
+To see the above in action, test connecting to the server using the APIM endpoint instead of the Function app endpoint:
+
+1. Open _mcp.json_ in VS Code
+1. Stop the **remote-mcp-server** or **local-mcp-server** servers if still running
 1. Start the **remote-mcp-server-apim** server
 1. VS Code will prompt you for the APIM resource name
-1. Click **Allow** when a window pops up saying the MCP Server wants to authenticate to Microsoft. 
-1. Sign into your Microsoft account to connect to the server 
+1. Click **Allow** when a window pops up saying the MCP Server wants to authenticate to Microsoft.
+1. Sign into your Microsoft account to connect to the server  
+
+### Support for other clients
+
+Since Entra ID doesn't provide native support for DCR (Dynamic Client Registration) and PKCE (Proof Key for Code Exchange) today,the above authorization flow is only supported on VS Code. If you use other clients (like Claude or Cursor), the easier option is to access the MCP server using the Function App endpoint and access key. The other option is to try out an [experimental approach](https://github.com/localden/remote-auth-mcp-apim-py/) that provides a workaround, which also leverages APIM.
 
 ## Next steps
 
