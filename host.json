@@ -12,6 +12,6 @@
             "arguments": ["dist/index.js"]
         },
         "enableForwardingHttpRequest": true,
-        "enableHttpProxyingRequest": true
+        "enableProxyingHttpRequest": true
     }
 }
