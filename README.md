@@ -30,7 +30,7 @@ More generally speaking, you can leverage custom handlers to host apps built wit
 
 You'll need an [Azure subscription](../guides/developer/azure-developer-guide.md#understanding-accounts-subscriptions-and-billing). If you don't already have an account, [create a free one](https://azure.microsoft.com/free/dotnet/) before you begin.
 
-Ensure you have the following installed: 
+Ensure you have the **latest version** of the following installed: 
 
 * [Azure Developer CLI](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd)
 * [Azure Functions Core Tools](https://learn.microsoft.com/azure/azure-functions/functions-run-local?tabs=windows%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-typescript) 
@@ -158,4 +158,8 @@ The following are some common issues that come up.
 5. **Connection state: Error Error sending message to {endpoint}: TypeError: fetch failed**
     
     - Ensure the Function app name is correct when connecting to the server with the app endpoint.
-    - Ensure the APIM resource name is correct when connecting to the server with the APIM endpoint. 
+    - Ensure the APIM resource name is correct when connecting to the server with the APIM endpoint.
+      
+6. **Ensure you have the latest version of Azure Functions Core Tools installed.**
+   
+    - You need [version >=4.2.1](https://learn.microsoft.com/azure/azure-functions/functions-run-local?tabs=windows%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-typescript). Check by running `func --version`.
