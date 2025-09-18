@@ -160,7 +160,8 @@ The following are some common issues that come up.
     
     - Ensure the Function app name is correct when connecting to the server with the app endpoint.
     - Ensure the APIM resource name is correct when connecting to the server with the APIM endpoint. 
-
+      
 6. **Ensure you have the latest version of Azure Functions Core Tools installed.**
    
     - You need [version >=4.2.1](https://learn.microsoft.com/azure/azure-functions/functions-run-local?tabs=windows%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-typescript). Check by running `func --version`.
+
