@@ -46,9 +46,10 @@ Ensure you have the **latest version** of the following installed:
     ```
     git clone https://github.com/Azure-Samples/mcp-sdk-functions-hosting-node.git
     ```
-1. Open up the sample in VSCode, run `npm install` in the root directory
-1. Run `func start` to start the MCP server locally
-1. Open _mcp.json_ (in the _vscode_ directory) and click the Start button above the **local-mcp-server**
+1. Open up the sample in VSCode, run `npm install` in the root directory. This will add a _node_modules_ directory.
+1. Run `npm run build`. This will add a _dist_ directory.
+1. Run `func start` to start the MCP server locally.
+1. Open _mcp.json_ (in the _vscode_ directory) and click the Start button above the **local-mcp-server**.
 1. Click on the Copilot icon at the top and change to _Agent_ mode in the question window. 
 1. Ask "What is the weather in NYC?" Copilot should call one of the weather tools to help answer this question. 
 
@@ -158,8 +159,9 @@ The following are some common issues that come up.
 5. **Connection state: Error Error sending message to {endpoint}: TypeError: fetch failed**
     
     - Ensure the Function app name is correct when connecting to the server with the app endpoint.
-    - Ensure the APIM resource name is correct when connecting to the server with the APIM endpoint.
+    - Ensure the APIM resource name is correct when connecting to the server with the APIM endpoint. 
       
 6. **Ensure you have the latest version of Azure Functions Core Tools installed.**
    
     - You need [version >=4.2.1](https://learn.microsoft.com/azure/azure-functions/functions-run-local?tabs=windows%2Cisolated-process%2Cnode-v4%2Cpython-v2%2Chttp-trigger%2Ccontainer-apps&pivots=programming-language-typescript). Check by running `func --version`.
+

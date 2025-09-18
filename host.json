@@ -7,11 +7,10 @@
     },
     "customHandler": {
         "description": {
-            "defaultExecutablePath": "node",
+            "defaultExecutablePath": "npm",
             "workingDirectory": "",
-            "arguments": ["dist/index.js"]
+            "arguments": ["run start"]
         },
-        "enableForwardingHttpRequest": true,
         "enableProxyingHttpRequest": true
     }
 }
