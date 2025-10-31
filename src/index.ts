@@ -68,7 +68,7 @@ app.delete('/mcp', async (req, res) => {
 
 // Start the server
 
-const PORT = process.env.FUNCTIONS_CUSTOMHANDLER_PORT || process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, (error?: Error) => {
   if (error) {
     console.error('Failed to start server:', error);
