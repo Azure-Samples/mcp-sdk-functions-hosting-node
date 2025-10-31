@@ -4,7 +4,7 @@ name: node-mcp-sdk-functions-azd
 metadata:
   template: node-mcp-sdk-functions-azd@1.0.0
 services:
-  api:
+  mcp:
     project: .
     language: js
     host: function
