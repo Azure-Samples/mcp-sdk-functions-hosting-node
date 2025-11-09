@@ -64,7 +64,7 @@ Clone the repo and open the sample in Visual Studio Code
 
 ## Test the server locally
 >[!NOTE]
->Oct 31 2025 update: Running the server locally requires Azure Functions Core Tools v4.5.0, which is in the progress of releasing. Skip to [next section](#register-resource-provider-before-deploying) to prepare for deployment for now.  
+>Oct 31 2025 update: Running the server locally requires Azure Functions Core Tools v4.5.0, which is in the process of releasing. Skip to [next section](#register-resource-provider-before-deploying) to prepare for deployment for now.  
 
 1. In the root directory, run `npm install` to install dependencies
 1. Run `npm run build` to compile TypeScript to JavaScript
