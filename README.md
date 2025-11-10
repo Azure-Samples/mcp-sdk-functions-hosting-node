@@ -52,7 +52,7 @@ Once you've done the necessary renaming, follow these steps:
 1. In `host.json`, ensure the `port` value is the same as the one used by the MCP server.
 1. Follow instructions starting in the [Test the server locally](#test-the-server-locally) section. 
 
-You can find out more details about the [template](https://github.com/Azure-Samples/self-hosted-mcp-scaffold-node). 
+You can find out more details about the [template](https://github.com/Azure-Samples/self-hosted-mcp-scaffold-typescript). 
 
 ## If you're starting from scratch...
 
