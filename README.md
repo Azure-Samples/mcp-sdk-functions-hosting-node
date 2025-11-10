@@ -44,7 +44,7 @@ The following instructions will pull in artifacts required for local server test
 It's unlikely that your project would have files and directory with the same names, but if it does, you'll need to rename them so they won't be overwritten.
 
 Once you've done the necessary renaming, follow these steps: 
-1. Inside the MCP server project, run `azd init --template self-hosted-mcp-scaffold-node`.
+1. Inside the MCP server project, run `azd init --template self-hosted-mcp-scaffold-typescript`.
 1. Answer the prompts
     - Continue initializing an app in '/your/mcp/project/folder'?: Select Yes. 
     - Files present both locally and in template: Likely the only one is README, and you can keep the existing. 
