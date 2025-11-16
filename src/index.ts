@@ -1,7 +1,7 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { createServer } from './server.js'; 
-
+import path from 'path';
 
 const app = express();
 app.use(express.json());
@@ -16,6 +16,7 @@ app.post('/mcp', async (req, res) => {
   try {
     const transport = new StreamableHTTPServerTransport({
       sessionIdGenerator: undefined, // Stateless mode
+      enableJsonResponse: true,
     });
 
     res.on('close', () => {
@@ -64,6 +65,13 @@ app.delete('/mcp', async (req, res) => {
     },
     id: null
   }));
+});
+
+app.get('/authcomplete', (_req: Request, res: Response) => {
+    const fileUrl = new URL(import.meta.url);
+    const __dirname = path.dirname(fileUrl.pathname.replace(/^\/([a-zA-Z]:)/, '$1'));
+    const filePath = path.resolve(__dirname, '..', 'authcomplete.html');
+    res.sendFile(filePath);
 });
 
 // Start the server

@@ -10,9 +10,10 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@modelcontextprotocol/sdk": "^1.20.0",
     "express": "^4.18.2",
-    "zod": "^3.25.76"
+    "zod": "^3.25.76",
+    "@azure/identity": "^4.13.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
