@@ -138,7 +138,7 @@ export const createServer = () => {
 
   // Add Get Current User tool using On-Behalf-Of flow with built-in authentication and authorization
   server.registerTool(
-    'get_current_user',
+    'get-current-user',
     {
       title: 'Get Current User',
       description: 'Get current logged-in user information from Microsoft Graph using Azure App Service authentication headers and On-Behalf-Of flow',
