@@ -6,6 +6,6 @@ metadata:
 services:
   mcp:
     project: .
-    language: js
+    language: ts
     host: function
     remoteBuild: true
