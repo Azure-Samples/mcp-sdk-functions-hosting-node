@@ -3,7 +3,7 @@
     "configurationProfile": "mcp-custom-handler",
     "customHandler": {
         "description": {
-            "defaultExecutablePath": "npm",
+            "defaultExecutablePath": "node",
             "arguments": ["run", "start"] 
         },
         "http": {
