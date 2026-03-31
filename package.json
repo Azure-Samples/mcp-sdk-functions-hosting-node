@@ -4,7 +4,7 @@
   "description": "An MCP server providing weather information",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "npx tsc",
     "start": "node dist/index.js",
     "dev": "tsc --watch & node dist/index.js",
     "test": "node test.js"
